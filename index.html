@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Nomes Espirituais</title>
+  <script defer src="script.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input { padding: 8px; width: 300px; margin-bottom: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 8px; border: 1px solid #ccc; }
+    th { background-color: #f2f2f2; }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 2;
+      border-bottom: 2px solid #ccc;
+    }  
+  </style>
+</head>
+<body>
+  <h1>Buscador de Nomes Espirituais<br>
+    Spiritual Names Search
+  </h1>
+  <input type="text" id="search" placeholder="Digite um nome/ Type a name">
+  <table id="resultsTable">
+    <thead>
+      <tr>
+        <th>Nome masculino<br>Male name</th>
+        <th>Script</th>
+        <th>Nome feminino<br>Female name</th>
+        <th>Script</th>
+        <th>Significado<br>Meaning</th>
+        <th>1º ou 2º nome<br>1st or 2nd</th>
+        <th>Idioma<br>Language</th>
+        <th>Fonte<br>Source</th>
+        <th>Confirmação<br>Confirm</th>
+        <th>Pop.<br>Pop.</th>
+        <th>Notas<br>Notes</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+</html>
