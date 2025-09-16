@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Sannyas</title>
+  <script defer src="script.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input { padding: 8px; width: 300px; margin-bottom: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { padding: 8px; border: 1px solid #ccc; }
+    th { background-color: #f2f2f2; }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 2;
+      border-bottom: 2px solid #ccc;
+    }
+
+    #btnTopo {
+    display: none; /* começa invisível */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+    }
+
+    #btnTopo:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Buscador de Sannyas<br>
+    Sannyas list ans meanings
+  </h1>
+  <p>Lista de Sannyas de Osho com significados compilado por <strong>Swami Sāmudroprem</strong><br>
+    Osho Sannyas Names & terms List compiled by <strong>Swami Sāmudroprem</strong>
+  </p>
+  <p>O Buscador de Sannyas é um sistema web desenvolvido por <strong>Mukto Desenvolvimento Humano</strong> com base na lista compilada por Swami Sāmudroprem<br>
+    The Buscador de Sannyas is a web systema developed by <strong>Mukto Desenvolvimento Humano</strong> based on the list compiled by Swami Sāmudroprem<br>
+    <small>Veja mais informações no <a href="#rodape">rodapé</a> desta página</small><br>
+    <small>See more information in the <a href="#rodape">footer</a> this page</small>
+  </p>
+  <p>Referências/References:<br>
+    <a href="https://mukto.com.br" target="blank" rel="noopener noreferrer">mukto.com.br</a><br>
+    <a href="https://citantra.com" target="blank" rel="noopener noreferrer">citatra.com</a><br>
+  </p>
+  <p>Nota: A Osho International Foundation reivindica direito autorais sobre as obras de Osho e a marca registrada de OSHO.<br>
+    Note: Osho International Foundation claims copyright on the works of Osho and the trademark of OSHO.<br>
+  </p>
+  <p>Esta lista é uma expansão e esclarecimento dos nomes que Osho deu aos novos discípulos. Pretende-se que sirva como informação adicional para aqueles que desejam pesquisar nomes espirituais.<br>
+    Recomendamos a livre iniciativa dos leitores. Não há intenção de conflito ou competição com qualquer organização ou entidade legal.<br>
+    ---<br>
+    This list is an expansion and clarification of the names that Osho gave to new disciples. It is intended as extra information for those wishing to search for spiritual names.<br>
+    We recommend free agency for readers. No conflict or competition, with any organization or legal entity, is intended.
+  </p>
+  <input type="text" id="search" placeholder="Digite um nome/ Type a name">
+  <table id="resultsTable">
+    <thead>
+      <tr>
+        <th>Nome masculino<br>Male name</th>
+        <th>Script</th>
+        <th>Nome feminino<br>Female name</th>
+        <th>Script</th>
+        <th>Significado<br>Meaning</th>
+        <th>1º ou 2º nome<br>1st or 2nd</th>
+        <th>Idioma<br>Language</th>
+        <th>Fonte<br>Source</th>
+        <th>Confirmação<br>Confirm</th>
+        <th>Pop.<br>Pop.</th>
+        <th>Notas<br>Notes</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table><br><br>
+  <footer id="rodape">
+    <h3>Notas e referências<br>
+      Notes and references
+    </h3>
+    <p><strong>Spiritual Names & terms List compiled by Sāmudroprem सामुद्रप्रेम् Email: AwakenIMAP@gmail.com<br></strong>
+      <strong>N.B. Pronunciation:</strong> Ā ā = long ‘a’ like 'ah' but not quite ‘ar’ (spelling alternative 'aa') / ê = ai / é = ay /  Ī, ī  = spelling alternative 'ee' / Ū ū = spelling alternative 'oo'<br>
+      <strong>e.g.</strong> Ānanda can be spelled as Aananda. N.B. Anand = Joyless. Ānanda (Aananda) = Joy, Bliss<br>
+      Not all Sanskrit, or other languages, pronounciations are always defined here e.g. no difference is given between sh and zh. The Anusvara letter n is given as m and n, e.g. Samsara and Sansara. For correct pronounciation see Sanskrit dictionaries.<br>
+      There is no 'f' sound in Sanskrit, and 'ph' is prononced as 'p-h' as in 'uphill'.<br>
+      <strong>Source abbreviations:</strong> OD = Osho darshan diaries / OB = Osho discourse books / MW = Monier-Williams Sanskrit Dictionary / S = previous Osho Sannyas name lists / SD = other Sanskrit dictionaries / HD = Hindi dictionaries PD = Pali dictionaries<br>
+      TS = Thousand Name of Shiva / TB = Thousand Names of Brahma / TV = Thousand Names of Vishnu / Onl = Online resources / 99N = 99 Names of Allah / Sp = Samudroprem's addition or confirmation<br>
+      <strong>Note 1:</strong> "Add Veet or Mukta" = Recommendation to combine with 1st Name "Veet" to mean "Beyond" or "Transcendence of"; or add 1st Name "Mukta" to mean "Freedom from."<br>
+      <strong>Note 2:</strong> Neutral names can end in an 'o', however in traditional Sanskrit the 'o'  joins two words together as a compund name e.g.  Sāmudroprem<br>
+      <strong>Note 3:</strong> In Sanskrit most male names end with an 'a', however in Hindi the same name can be pronounced (and written in script) without the 'a' and end in the consonant. Thus for male names the final 'a' is optional.<br>
+      <strong>Note 4:</strong> The difference of Sanskrit and Hindi: Sanksrit 'v' is oftern pronounced in Hindi as a 'w,' e.g. Svabhava or Swabhav. Also sometimes a "V' is also pronounced as a 'B' e.g. Vanshi or Banshi.<br>
+      <strong>Note 5:</strong> In Sanskrit most (but not all) female names with end with the long ā (aa). The long 'ī' (ee) is also a common feminine ending.
+    </p>
+  </footer>
+  <button id="btnTopo" title="Voltar ao topo">⬆ Topo</button>
+</body>
+</html>
