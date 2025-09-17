@@ -1,6 +1,7 @@
 let dados = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Carregar JSON
   fetch('spiritual_names.json')
     .then(r => r.json())
     .then(json => {
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       exibirResultados([]); // evita quebrar a página
     });
 
+  // Campo de busca
   const input = document.getElementById('search');
   input.addEventListener('input', () => {
     const termo = input.value.toLowerCase().trim();
@@ -26,6 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     exibirResultados(filtrados);
   });
+
+  // Botão "voltar ao topo"
+  const btnTopo = document.getElementById("btnTopo");
+  if (btnTopo) {
+    window.addEventListener("scroll", () => {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btnTopo.style.display = "block";
+      } else {
+        btnTopo.style.display = "none";
+      }
+    });
+
+    btnTopo.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 });
 
 function exibirResultados(lista = []) {
@@ -50,20 +68,3 @@ function exibirResultados(lista = []) {
     tbody.appendChild(tr);
   });
 }
-
-// pegar o botão
-const btnTopo = document.getElementById("btnTopo");
-
-// mostrar/esconder quando rolar
-window.onscroll = function () {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    btnTopo.style.display = "block";
-  } else {
-    btnTopo.style.display = "none";
-  }
-};
-
-// ação ao clicar
-btnTopo.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
